@@ -1,1 +1,1 @@
-print('t' if input()=='1' else 'f')
+print('t' if int(input())==1 else 'f')
