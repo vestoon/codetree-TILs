@@ -1,6 +1,6 @@
 s = input()
 if s == 'S':
-    print("superior")
+    print("Superior")
 elif s == 'A':
     print("Excellent")
 elif s == 'B':
