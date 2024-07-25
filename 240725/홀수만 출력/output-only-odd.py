@@ -1,2 +1,5 @@
 a, b = map(int, input().split())
-print(*[x for x in range(a, b+1)])
+
+for x in range(a, b+1):
+    if x%2:
+        print(x, end = ' ')
