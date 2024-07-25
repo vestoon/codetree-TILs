@@ -1,0 +1,1 @@
+print(*[x for x in range(26, 9, -1)])
