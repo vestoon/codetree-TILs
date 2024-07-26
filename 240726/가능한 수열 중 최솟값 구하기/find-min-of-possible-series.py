@@ -23,7 +23,8 @@ while len(ans) != n:
         # 넣은거 취소하고  다시 반복
         ans.pop()
     else: # 아무 것도 넣지 못함
-        avoid[ans[-1]] = True
+        if ans:
+            avoid[ans[-1]] = True
         ans.pop() # 하나 더 빼야 함
         
 for x in ans:
