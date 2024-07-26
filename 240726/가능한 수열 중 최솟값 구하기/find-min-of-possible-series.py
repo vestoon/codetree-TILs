@@ -1,26 +1,30 @@
 n = int(input())
 
+ans = []
+avoid = [False for x in range(7)]
 
-# 길이가 n일 때 체킹 먼저
-def sol(cur):
-    if len(cur) == n:
-        for l in range(1, n//2 + 1):
 
-            for i in range(n - 2*l+1):
-
-                for j in range(i, i+l):
-                    if cur[j] != cur[j+l]:
-                        break
-                else: # 부분수열이 일치하는 경우
-                    return False
-    
-        print(cur)
-        return True
-    
-    for nxt in ['4', '5', '6']:
-        if nxt == cur[-1]:
+while len(ans) != n:
+    for nxt in range(4, 7):
+        if avoid[nxt]:
             continue
-        if sol(cur+nxt):
-            return True
+        ans.append(nxt)
 
-sol('4')
+        for l in range(1, len(ans)//2 + 1):
+            for i in range(len(ans)-2*l, len(ans)-l):
+                if ans[i] != ans[i+l]:
+                    break
+            else: # 일치하는 부분수열 발생
+                break
+        else: # 일치하는 부분수열이 하나도 없음
+            avoid = [False for x in range(7)]
+            break # 종료하고 다음 while문으로
+        #일치하는 부분수열이 있기 때문에
+        # 넣은거 취소하고  다시 반복
+        ans.pop()
+    else: # 아무 것도 넣지 못함
+        avoid[ans[-1]] = True
+        ans.pop() # 하나 더 빼야 함
+        
+for x in ans:
+    print(x, end='')
