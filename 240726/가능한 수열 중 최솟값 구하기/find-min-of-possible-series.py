@@ -25,7 +25,7 @@ while len(ans) != n:
     else: # 아무 것도 넣지 못함
         if ans:
             avoid[ans[-1]] = True
-        ans.pop() # 하나 더 빼야 함
+            ans.pop() # 하나 더 빼야 함
         
 for x in ans:
     print(x, end='')
