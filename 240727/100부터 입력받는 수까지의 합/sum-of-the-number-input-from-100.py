@@ -1,3 +1,3 @@
 n = int(input())
 
-print(5050 - n*(n-1)//2)
+print(5050 - (n-1)*n//2)
