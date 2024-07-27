@@ -1,5 +1,5 @@
 a, b = map(int, input().split())
-if b > a:
+if b < a:
     a, b = b, a
 
 acc = 0
