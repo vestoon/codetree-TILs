@@ -1,6 +1,8 @@
 a, b = map(int, input().split())
 
-B = b*(b+1)//2
-A = a*(a-1)//2
+acc = 0
 
-print(B-A)
+for x in range(a, b+1):
+    acc += x
+
+print(acc)
