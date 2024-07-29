@@ -7,4 +7,4 @@ acc = 0
 for _ in range(n):
     acc += int(input())
 
-print(acc, f"{acc/n:.2f}")
+print(acc, f"{acc/n:.1f}")
