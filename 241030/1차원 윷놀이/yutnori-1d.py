@@ -19,11 +19,15 @@ def recur(i):
     
     for j in range(k):
         if cur_state[j] >= m:
-            continue
+            recur(n)
+            continue # 백트레킹
+
         cur_state[j] += distances[i]
         if cur_state[j] >= m:
             cur_score += 1
+
         recur(i+1)
+
         if cur_state[j] >= m:
             cur_score -= 1
         cur_state[j] -= distances[i]
