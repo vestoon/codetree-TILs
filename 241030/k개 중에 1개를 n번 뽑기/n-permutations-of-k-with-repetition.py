@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+K, N = map(int, input().split())
 
 def recur(acc:list, cnt:int):
     if cnt == N:
