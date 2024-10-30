@@ -19,7 +19,7 @@ def recur(i):
     
     for j in range(k):
         if cur_state[j] >= m:
-            recur(n)
+            max_score = max(max_score, cur_score)
             continue # 백트레킹
 
         cur_state[j] += distances[i]
