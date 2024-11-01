@@ -25,4 +25,4 @@ while que:
             grid[ni][nj] = 0
             que.append((ni, nj))
 
-print(0 if grid[m-1][n-1] else 1)
+print(0 if grid[n-1][m-1] else 1)
