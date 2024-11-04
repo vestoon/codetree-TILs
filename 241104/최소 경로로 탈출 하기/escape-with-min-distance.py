@@ -6,7 +6,7 @@ dy = (1, -1, 0, 0)
 dx = (0, 0, 1, -1)
 
 n, m = map(int, input().split())
-grid = list(map(int, input().split()))
+grid = [list(map(int, input().split())) for x in range(n)]
 
 def bfs(i, j):
     que = deque()
