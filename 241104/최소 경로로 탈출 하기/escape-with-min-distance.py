@@ -16,7 +16,6 @@ def bfs(i, j):
     ret = 0
 
     while que:
-        ret += 1
         l = len(que)
         for _ in range(l):
             cur_i, cur_j = que.popleft()
@@ -29,5 +28,6 @@ def bfs(i, j):
                 if 0<=nxt_i<n and 0<=nxt_j<m and not visited[nxt_i][nxt_j] and grid[nxt_i][nxt_j]:
                     que.append((nxt_i, nxt_j))
                     visited[nxt_i][nxt_j] = True
+        ret += 1
 
 print(bfs(0, 0))
