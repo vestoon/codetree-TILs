@@ -29,5 +29,6 @@ def bfs(i, j):
                     que.append((nxt_i, nxt_j))
                     visited[nxt_i][nxt_j] = True
         ret += 1
+    return -1
 
 print(bfs(0, 0))
