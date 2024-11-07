@@ -7,6 +7,7 @@ def sol():
     # print(coins)
     dp = [0 for x in range(M+1)]
     for coin in coins:
+        if coin > M: continue
         dp[coin] = 1
 
 
