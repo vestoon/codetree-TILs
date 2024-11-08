@@ -13,6 +13,7 @@ input = sys.stdin.readline
 N, M = map(int, input().split()) # N: 보석 개수, M: 최대 무게
 dp = [0 for x in range(M+1)] # 무게 i로 조합할 수 있는 최대 가치
 jewels = []
+ans = 0
 
 for _ in range(N):
     w, v = map(int, input().split())
@@ -24,5 +25,6 @@ for i in range(M+1):
         if i+w > M: continue
 
         dp[i+w] = max(dp[i+w], dp[i]+v)
+    ans = max(ans, dp[i])
 
-print(max(dp))
+print(ans)
