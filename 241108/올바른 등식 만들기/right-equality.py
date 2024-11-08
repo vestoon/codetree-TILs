@@ -22,6 +22,7 @@ dp[arr[0]] = 1
 dp[-arr[0]] = 1
 
 for a in arr[1:]:
+    if not a: continue
     tmp = [0 for x in range(41)]
 
     for i in range(-20, 21):
