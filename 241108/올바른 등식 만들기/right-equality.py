@@ -18,11 +18,12 @@ N, M = map(int, input().split())
 arr = list(map(int ,input().split()))
 
 dp = [0 for x in range(41)] # -20 ~ 20 까지 인덱싱 가능
-dp[arr[0]] += 1
-dp[-arr[0]] += 1
+dp[0] = 1
+# dp[arr[0]] += 1
+# dp[-arr[0]] += 1
 
-for a in arr[1:]:
-    tmp = [0 for x in range(42)]
+for a in arr:
+    tmp = [0 for x in range(41)]
 
     for i in range(-20, 21):
         if i+a < 20:
