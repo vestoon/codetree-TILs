@@ -22,11 +22,9 @@ dp[arr[0]] += 1
 dp[-arr[0]] += 1
 
 for a in arr[1:]:
-    tmp = [0 for x in range(41)]
+    tmp = [0 for x in range(42)]
 
     for i in range(-20, 21):
-        if not dp[i]: continue
-
         if i+a < 20:
             tmp[i+a] += dp[i]
         if -20 < i-a:
