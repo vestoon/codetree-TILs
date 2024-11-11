@@ -30,4 +30,4 @@ for i in range(3): # i층에서 출발했을 때
 
                 dp[i][j][k] = max(dp[i][j][k], dp[i][j-1][pk]+temple[j][k])
 
-print(max(max(dp[0][n-1]), max(dp[1][n-1]), max(dp[2][n-1])))
+print(max(max(dp[0][n-1][1], dp[0][n-1][2]), max(dp[1][n-1][0], dp[1][n-1][2]), max(dp[2][n-1][0], dp[2][n-1][1])))
